@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hermandad Global Servicios Migratorios — Free Citizenship Classes in El Paso</title>
-<meta name="description" content="Hermandad Global Servicios Migratorios is a 501(c)(3) nonprofit in El Paso, Texas offering free citizenship classes and community support to low-income families. We are not attorneys and do not provide legal advice.">
+<title>Hermandad Global Servicios Migratorios — Free Citizenship Classes in Texas</title>
+<meta name="description" content="Hermandad Global Servicios Migratorios is a 501(c)(3) nonprofit with five offices across Texas offering free citizenship classes and community support to low-income families. We are not attorneys and do not provide legal advice.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2316585C'/%3E%3Ctext x='16' y='21' font-family='Georgia,serif' font-size='13' fill='%23fff' text-anchor='middle'%3EHG%3C/text%3E%3C/svg%3E">
 
 <style>
@@ -378,6 +378,62 @@
 
   ul.plain li { margin-bottom: 0.5rem; }
 
+  .offices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 1.75rem;
+  }
+
+  .office {
+    background: var(--surface);
+    padding: 1.4rem 1.5rem 1.6rem;
+  }
+
+  .office-tag {
+    display: block;
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rio);
+    margin-bottom: 0.5rem;
+  }
+
+  .office h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0 0 0.6rem;
+  }
+
+  .office-phone {
+    margin: 0 0 0.5rem;
+    font-size: 1.02rem;
+  }
+
+  .office-phone a {
+    color: var(--rio);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .office-phone a:hover { opacity: 0.75; }
+
+  .office-addr {
+    margin: 0 0 0.7rem;
+    font-size: 0.94rem;
+    color: var(--ink);
+  }
+
+  .office-hours {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
   .promise {
     background: var(--rio-soft);
     border-left: 3px solid var(--rio);
@@ -457,7 +513,7 @@
       <nav class="nav" aria-label="Main">
         <a href="#services"><span class="en">What we do</span><span class="es">Qué hacemos</span></a>
         <a href="#classes"><span class="en">Citizenship classes</span><span class="es">Clases de ciudadanía</span></a>
-        <a href="#visit"><span class="en">Visit us</span><span class="es">Visítenos</span></a>
+        <a href="#visit"><span class="en">Our offices</span><span class="es">Nuestras oficinas</span></a>
         <a href="#privacy"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
         <a href="#terms"><span class="en">Terms</span><span class="es">Términos</span></a>
       </nav>
@@ -471,8 +527,8 @@
   <div class="hero" id="top">
     <div class="wrap">
       <p class="eyebrow">
-        <span class="en">A nonprofit serving El Paso</span>
-        <span class="es">Una organización sin fines de lucro al servicio de El Paso</span>
+        <span class="en">A nonprofit serving Texas families</span>
+        <span class="es">Una organización sin fines de lucro al servicio de las familias de Texas</span>
       </p>
       <h1>
         <span class="en">Citizenship is a long road. No family should walk it alone.</span>
@@ -480,19 +536,19 @@
       </h1>
       <p class="lede">
         <span class="en">Hermandad Global Servicios Migratorios is a 501(c)(3) nonprofit organization
-          in El Paso, Texas. We offer free citizenship classes and community support to low-income
-          families working toward United States citizenship.</span>
+          with five offices across Texas. We offer free citizenship classes and community support to
+          low-income families working toward United States citizenship.</span>
         <span class="es">Hermandad Global Servicios Migratorios es una organización sin fines de
-          lucro 501(c)(3) en El Paso, Texas. Ofrecemos clases de ciudadanía gratuitas y apoyo
-          comunitario a familias de bajos recursos que trabajan hacia la ciudadanía de los Estados
-          Unidos.</span>
+          lucro 501(c)(3) con cinco oficinas en Texas. Ofrecemos clases de ciudadanía gratuitas y
+          apoyo comunitario a familias de bajos recursos que trabajan hacia la ciudadanía de los
+          Estados Unidos.</span>
       </p>
       <div class="hero-actions">
         <a class="btn btn-solid" href="#classes">
           <span class="en">Free citizenship classes</span><span class="es">Clases gratuitas</span>
         </a>
         <a class="btn btn-ghost" href="#visit">
-          <span class="en">Visit our office</span><span class="es">Visite nuestra oficina</span>
+          <span class="en">Find an office</span><span class="es">Encuentre una oficina</span>
         </a>
       </div>
     </div>
@@ -601,42 +657,75 @@
 
     <section id="visit">
       <h2 class="section-title">
-        <span class="en">Visit us</span><span class="es">Visítenos</span>
+        <span class="en">Our offices</span><span class="es">Nuestras oficinas</span>
       </h2>
-      <div class="split">
-        <div>
-          <dl>
-            <div class="datum">
-              <dt><span class="en">Office</span><span class="es">Oficina</span></dt>
-              <dd>2901 Alameda Ave<br>El Paso, TX 79905</dd>
-            </div>
-            <div class="datum">
-              <dt><span class="en">Phone</span><span class="es">Teléfono</span></dt>
-              <dd><a href="tel:9152660000">(915) 266-0000</a></dd>
-            </div>
-            <div class="datum">
-              <dt><span class="en">Email</span><span class="es">Correo electrónico</span></dt>
-              <dd><a href="mailto:jorge.hernandez@hermandadtexas.org">jorge.hernandez@hermandadtexas.org</a></dd>
-            </div>
-          </dl>
-        </div>
-        <div>
-          <p>
-            <span class="en">Everyone is welcome. We serve families regardless of income, and our
-              citizenship classes are free to the community.</span>
-            <span class="es">Todos son bienvenidos. Atendemos a las familias sin importar sus
-              ingresos, y nuestras clases de ciudadanía son gratuitas para la comunidad.</span>
+      <p>
+        <span class="en">Everyone is welcome. We serve families regardless of income, and our
+          citizenship classes are free to the community. Call any office to ask a question — you do
+          not need an appointment.</span>
+        <span class="es">Todos son bienvenidos. Atendemos a las familias sin importar sus ingresos,
+          y nuestras clases de ciudadanía son gratuitas para la comunidad. Llame a cualquier oficina
+          para hacer una pregunta — no necesita cita.</span>
+      </p>
+
+      <div class="offices">
+        <div class="office">
+          <h3>Dallas</h3>
+          <p class="office-phone"><a href="tel:2149426000">(214) 942-6000</a></p>
+          <p class="office-addr">424 W Jefferson Blvd, Unit C<br>Dallas, TX 75208</p>
+          <p class="office-hours">
+            <span class="en">Mon&ndash;Thu 9 AM&ndash;6 PM · Fri&ndash;Sat 9 AM&ndash;5 PM CT</span>
+            <span class="es">Lun&ndash;Jue 9 AM&ndash;6 PM · Vie&ndash;Sáb 9 AM&ndash;5 PM CT</span>
           </p>
-          <p>
-            <span class="en">If you are unsure whether we can help with your situation, call and
-              ask. If it is something we should not handle, we will tell you plainly and point you
-              toward someone who can.</span>
-            <span class="es">Si no está seguro de si podemos ayudarle con su situación, llame y
-              pregunte. Si es algo que no debemos manejar, se lo diremos claramente y lo
-              dirigiremos a alguien que sí pueda.</span>
+        </div>
+
+        <div class="office">
+          <span class="office-tag"><span class="en">Main office</span><span class="es">Oficina principal</span></span>
+          <h3>El Paso &mdash; Alameda</h3>
+          <p class="office-phone"><a href="tel:9152660000">(915) 266-0000</a></p>
+          <p class="office-addr">2901 Alameda Ave<br>El Paso, TX 79905</p>
+          <p class="office-hours">
+            <span class="en">Mon&ndash;Thu 9 AM&ndash;6 PM · Fri&ndash;Sat 9 AM&ndash;5 PM MT</span>
+            <span class="es">Lun&ndash;Jue 9 AM&ndash;6 PM · Vie&ndash;Sáb 9 AM&ndash;5 PM MT</span>
+          </p>
+        </div>
+
+        <div class="office">
+          <h3>El Paso &mdash; Zaragoza</h3>
+          <p class="office-phone"><a href="tel:9152660000">(915) 266-0000</a></p>
+          <p class="office-addr">1722 N Zaragoza, Suite C<br>El Paso, TX 79936</p>
+          <p class="office-hours">
+            <span class="en">Mon&ndash;Thu 9 AM&ndash;6 PM · Fri 9 AM&ndash;5 PM · Sat 9 AM&ndash;3 PM MT</span>
+            <span class="es">Lun&ndash;Jue 9 AM&ndash;6 PM · Vie 9 AM&ndash;5 PM · Sáb 9 AM&ndash;3 PM MT</span>
+          </p>
+        </div>
+
+        <div class="office">
+          <h3>Fort Worth</h3>
+          <p class="office-phone"><a href="tel:6822132666">(682) 213-2666</a></p>
+          <p class="office-addr">4200 South Fwy, Suite 1348<br>Fort Worth, TX 76115</p>
+          <p class="office-hours">
+            <span class="en">Mon&ndash;Sat 10 AM&ndash;7 PM · Sun 11 AM&ndash;6 PM CT</span>
+            <span class="es">Lun&ndash;Sáb 10 AM&ndash;7 PM · Dom 11 AM&ndash;6 PM CT</span>
+          </p>
+        </div>
+
+        <div class="office">
+          <h3>Garland</h3>
+          <p class="office-phone"><a href="tel:9722006000">(972) 200-6000</a></p>
+          <p class="office-addr">2511 Forest Ln<br>Garland, TX 75042</p>
+          <p class="office-hours">
+            <span class="en">Mon&ndash;Thu 9 AM&ndash;6 PM · Fri&ndash;Sat 9 AM&ndash;5 PM CT</span>
+            <span class="es">Lun&ndash;Jue 9 AM&ndash;6 PM · Vie&ndash;Sáb 9 AM&ndash;5 PM CT</span>
           </p>
         </div>
       </div>
+
+      <p style="margin-top:2rem">
+        <span class="en">General email:</span>
+        <span class="es">Correo general:</span>
+        <a href="mailto:jorge.hernandez@hermandadtexas.org" style="color:var(--rio)">jorge.hernandez@hermandadtexas.org</a>
+      </p>
     </section>
 
     <section id="privacy" class="legal">
@@ -838,6 +927,7 @@
       </div>
       <div>
         <p style="margin:0">
+          <span class="en">Main office</span><span class="es">Oficina principal</span><br>
           2901 Alameda Ave<br>
           El Paso, TX 79905<br>
           <a href="tel:9152660000">(915) 266-0000</a>
