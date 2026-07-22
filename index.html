@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hermandad Global Servicios Migratorios — Free Citizenship Classes in El Paso</title>
+<meta name="description" content="Hermandad Global Servicios Migratorios is a 501(c)(3) nonprofit in El Paso, Texas offering free citizenship classes and community support to low-income families. We are not attorneys and do not provide legal advice.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2316585C'/%3E%3Ctext x='16' y='21' font-family='Georgia,serif' font-size='13' fill='%23fff' text-anchor='middle'%3EHG%3C/text%3E%3C/svg%3E">
+
+<style>
+  :root {
+    --ground: #F4F6F5;
+    --surface: #FFFFFF;
+    --ink: #14262A;
+    --muted: #566A6C;
+    --line: #D7E0DD;
+    --rio: #16585C;
+    --rio-soft: #E5EFEE;
+    --marigold: #A8631A;
+    --marigold-soft: #FBF1E2;
+
+    --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --font-body: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --measure: 66ch;
+    --pad: clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0D1618;
+      --surface: #131F21;
+      --ink: #E7EEEC;
+      --muted: #97A8A8;
+      --line: #24363A;
+      --rio: #6FBAB3;
+      --rio-soft: #15302F;
+      --marigold: #E0A04A;
+      --marigold-soft: #2A2013;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0D1618;
+    --surface: #131F21;
+    --ink: #E7EEEC;
+    --muted: #97A8A8;
+    --line: #24363A;
+    --rio: #6FBAB3;
+    --rio-soft: #15302F;
+    --marigold: #E0A04A;
+    --marigold-soft: #2A2013;
+  }
+
+  :root[data-theme="light"] {
+    --ground: #F4F6F5;
+    --surface: #FFFFFF;
+    --ink: #14262A;
+    --muted: #566A6C;
+    --line: #D7E0DD;
+    --rio: #16585C;
+    --rio-soft: #E5EFEE;
+    --marigold: #A8631A;
+    --marigold-soft: #FBF1E2;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #site[data-lang="en"] .es,
+  #site[data-lang="es"] .en { display: none; }
+
+  .wrap {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding-inline: var(--pad);
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+
+  .masthead-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    padding-block: 1rem;
+  }
+
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-right: auto;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .mark-glyph {
+    width: 2.1rem;
+    height: 2.1rem;
+    flex: none;
+    border-radius: 50%;
+    background: var(--rio);
+    color: var(--surface);
+    display: grid;
+    place-items: center;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    line-height: 1;
+  }
+
+  .mark-text {
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    letter-spacing: 0.01em;
+  }
+
+  .mark-text small {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.1rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .nav a:hover,
+  .nav a:focus-visible { color: var(--rio); border-bottom-color: var(--rio); }
+
+  .lang {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--ground);
+  }
+
+  .lang button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+  }
+
+  .lang button[aria-pressed="true"] {
+    background: var(--rio);
+    color: #fff;
+  }
+
+  :root[data-theme="dark"] .lang button[aria-pressed="true"],
+  .lang button[aria-pressed="true"] { color: #fff; }
+
+  @media (prefers-color-scheme: dark) {
+    .lang button[aria-pressed="true"] { color: #08191A; }
+  }
+
+  :root[data-theme="dark"] .lang button[aria-pressed="true"] { color: #08191A; }
+  :root[data-theme="light"] .lang button[aria-pressed="true"] { color: #fff; }
+
+  /* ---------- hero ---------- */
+
+  .hero {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    padding-block: clamp(3rem, 8vw, 5.5rem);
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rio);
+    margin: 0 0 1.1rem;
+    font-weight: 600;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.1rem, 6.2vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 1.25rem;
+    max-width: 18ch;
+  }
+
+  .hero .lede {
+    font-size: clamp(1.05rem, 2.2vw, 1.22rem);
+    color: var(--muted);
+    max-width: var(--measure);
+    margin: 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.7rem 1.35rem;
+    border-radius: 3px;
+    font-size: 0.92rem;
+    text-decoration: none;
+    border: 1px solid var(--rio);
+  }
+
+  .btn-solid { background: var(--rio); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn-solid { color: #08191A; } }
+  :root[data-theme="dark"] .btn-solid { color: #08191A; }
+  :root[data-theme="light"] .btn-solid { color: #fff; }
+
+  .btn-ghost { color: var(--rio); background: transparent; }
+  .btn:hover { opacity: 0.88; }
+
+  /* ---------- disclosure ---------- */
+
+  .disclosure {
+    background: var(--marigold-soft);
+    border-left: 3px solid var(--marigold);
+    padding: 1.1rem 1.3rem;
+    margin-block: clamp(2.5rem, 6vw, 3.5rem);
+    max-width: var(--measure);
+  }
+
+  .disclosure h2 {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--marigold);
+    margin: 0 0 0.5rem;
+  }
+
+  .disclosure p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  /* ---------- sections ---------- */
+
+  section { padding-block: clamp(2.5rem, 6vw, 4rem); }
+  section + section { border-top: 1px solid var(--line); }
+
+  h2.section-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.55rem, 3.6vw, 2.1rem);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 1.5rem;
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 650;
+    margin: 0 0 0.4rem;
+  }
+
+  p { max-width: var(--measure); }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 1.75rem;
+  }
+
+  .card {
+    background: var(--surface);
+    padding: 1.4rem 1.5rem 1.6rem;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.94rem;
+    color: var(--muted);
+  }
+
+  .card-tag {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rio);
+    margin-bottom: 0.7rem;
+  }
+
+  .highlight {
+    background: var(--rio-soft);
+    border: 1px solid var(--line);
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    margin-top: 1.5rem;
+  }
+
+  .highlight h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .highlight p:last-child { margin-bottom: 0; }
+
+  .split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .datum {
+    margin: 0 0 1.25rem;
+  }
+
+  .datum dt {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .datum dd {
+    margin: 0;
+    font-size: 1.02rem;
+  }
+
+  .datum a { color: var(--rio); text-decoration: none; border-bottom: 1px solid currentColor; }
+  .datum a:hover { opacity: 0.75; }
+
+  ul.plain {
+    max-width: var(--measure);
+    padding-left: 1.1rem;
+    margin: 0.5rem 0 0;
+  }
+
+  ul.plain li { margin-bottom: 0.5rem; }
+
+  .promise {
+    background: var(--rio-soft);
+    border-left: 3px solid var(--rio);
+    padding: 1.2rem 1.4rem;
+    margin-block: 1.75rem;
+    max-width: var(--measure);
+  }
+
+  .promise p {
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.98rem;
+  }
+
+  /* ---------- legal ---------- */
+
+  .legal { font-size: 0.94rem; }
+  .legal h3 { margin-top: 1.75rem; }
+  .legal p, .legal ul { color: var(--muted); }
+  .legal .updated {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+    padding-block: 2.5rem 3rem;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  footer .legal-name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+  }
+
+  footer a { color: var(--rio); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.75rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--rio);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site" data-lang="en">
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="mark" href="#top">
+        <span class="mark-glyph" aria-hidden="true">HG</span>
+        <span class="mark-text">
+          Hermandad Global
+          <small>Servicios Migratorios</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#services"><span class="en">What we do</span><span class="es">Qué hacemos</span></a>
+        <a href="#classes"><span class="en">Citizenship classes</span><span class="es">Clases de ciudadanía</span></a>
+        <a href="#visit"><span class="en">Visit us</span><span class="es">Visítenos</span></a>
+        <a href="#privacy"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
+        <a href="#terms"><span class="en">Terms</span><span class="es">Términos</span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language / Idioma">
+        <button type="button" id="btn-en" aria-pressed="true">EN</button>
+        <button type="button" id="btn-es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">
+        <span class="en">A nonprofit serving El Paso</span>
+        <span class="es">Una organización sin fines de lucro al servicio de El Paso</span>
+      </p>
+      <h1>
+        <span class="en">Citizenship is a long road. No family should walk it alone.</span>
+        <span class="es">La ciudadanía es un camino largo. Ninguna familia debe recorrerlo sola.</span>
+      </h1>
+      <p class="lede">
+        <span class="en">Hermandad Global Servicios Migratorios is a 501(c)(3) nonprofit organization
+          in El Paso, Texas. We offer free citizenship classes and community support to low-income
+          families working toward United States citizenship.</span>
+        <span class="es">Hermandad Global Servicios Migratorios es una organización sin fines de
+          lucro 501(c)(3) en El Paso, Texas. Ofrecemos clases de ciudadanía gratuitas y apoyo
+          comunitario a familias de bajos recursos que trabajan hacia la ciudadanía de los Estados
+          Unidos.</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#classes">
+          <span class="en">Free citizenship classes</span><span class="es">Clases gratuitas</span>
+        </a>
+        <a class="btn btn-ghost" href="#visit">
+          <span class="en">Visit our office</span><span class="es">Visite nuestra oficina</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <div class="disclosure">
+      <h2><span class="en">Please read this first</span><span class="es">Por favor lea esto primero</span></h2>
+      <p>
+        <span class="en">We are not attorneys and we do not provide legal advice or legal
+          representation. Hermandad Global Servicios Migratorios has applied for recognition by the
+          United States Department of Justice. That application is pending — we are not yet a
+          recognized organization, and we have no accredited representatives. We will say so here
+          the day that changes.</span>
+        <span class="es">No somos abogados y no brindamos asesoría legal ni representación legal.
+          Hermandad Global Servicios Migratorios ha presentado una solicitud de reconocimiento ante
+          el Departamento de Justicia de los Estados Unidos. Esa solicitud está pendiente — todavía
+          no somos una organización reconocida y no contamos con representantes acreditados. Lo
+          diremos aquí el día que eso cambie.</span>
+      </p>
+    </div>
+
+    <section id="services">
+      <h2 class="section-title">
+        <span class="en">What we do</span><span class="es">Qué hacemos</span>
+      </h2>
+      <p>
+        <span class="en">Our work is education and support. We help families understand the process
+          in front of them, get organized, and find their way to the right professional help when
+          they need it.</span>
+        <span class="es">Nuestro trabajo es educación y apoyo. Ayudamos a las familias a entender el
+          proceso que tienen por delante, a organizarse y a encontrar la ayuda profesional adecuada
+          cuando la necesitan.</span>
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <span class="card-tag"><span class="en">Education</span><span class="es">Educación</span></span>
+          <h3><span class="en">Citizenship classes</span><span class="es">Clases de ciudadanía</span></h3>
+          <p>
+            <span class="en">Free classes covering the civics questions, the English portion, and
+              what to expect at the interview.</span>
+            <span class="es">Clases gratuitas sobre las preguntas cívicas, la parte de inglés y qué
+              esperar en la entrevista.</span>
+          </p>
+        </div>
+        <div class="card">
+          <span class="card-tag"><span class="en">Orientation</span><span class="es">Orientación</span></span>
+          <h3><span class="en">Understanding the process</span><span class="es">Entender el proceso</span></h3>
+          <p>
+            <span class="en">Plain-language explanations of the steps, the forms, and the timelines
+              families can expect.</span>
+            <span class="es">Explicaciones en lenguaje sencillo sobre los pasos, los formularios y
+              los tiempos que las familias pueden esperar.</span>
+          </p>
+        </div>
+        <div class="card">
+          <span class="card-tag"><span class="en">Documents</span><span class="es">Documentos</span></span>
+          <h3><span class="en">Getting organized</span><span class="es">Organizar su documentación</span></h3>
+          <p>
+            <span class="en">Help gathering, sorting, and keeping track of the paperwork a case
+              requires.</span>
+            <span class="es">Ayuda para reunir, ordenar y llevar control de los documentos que
+              requiere un caso.</span>
+          </p>
+        </div>
+        <div class="card">
+          <span class="card-tag"><span class="en">Referrals</span><span class="es">Referencias</span></span>
+          <h3><span class="en">Connecting to help</span><span class="es">Conectar con ayuda</span></h3>
+          <p>
+            <span class="en">When a family needs legal advice, we refer them to licensed attorneys
+              and accredited representatives.</span>
+            <span class="es">Cuando una familia necesita asesoría legal, la referimos a abogados con
+              licencia y a representantes acreditados.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="classes">
+      <h2 class="section-title">
+        <span class="en">Free citizenship classes</span><span class="es">Clases de ciudadanía gratuitas</span>
+      </h2>
+      <div class="highlight">
+        <h3>
+          <span class="en">No cost. Bilingual. Open to the community.</span>
+          <span class="es">Sin costo. Bilingües. Abiertas a la comunidad.</span>
+        </h3>
+        <p>
+          <span class="en">Our citizenship classes are free and taught in both English and Spanish.
+            They cover the 100 civics questions, reading and writing in English, and what actually
+            happens at the naturalization interview.</span>
+          <span class="es">Nuestras clases de ciudadanía son gratuitas y se imparten en inglés y en
+            español. Cubren las 100 preguntas cívicas, la lectura y escritura en inglés, y lo que
+            realmente sucede en la entrevista de naturalización.</span>
+        </p>
+        <p>
+          <span class="en">Call us to ask when the next class begins. You do not need an appointment
+            to ask a question.</span>
+          <span class="es">Llámenos para preguntar cuándo comienza la próxima clase. No necesita
+            cita para hacer una pregunta.</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="visit">
+      <h2 class="section-title">
+        <span class="en">Visit us</span><span class="es">Visítenos</span>
+      </h2>
+      <div class="split">
+        <div>
+          <dl>
+            <div class="datum">
+              <dt><span class="en">Office</span><span class="es">Oficina</span></dt>
+              <dd>2901 Alameda Ave<br>El Paso, TX 79905</dd>
+            </div>
+            <div class="datum">
+              <dt><span class="en">Phone</span><span class="es">Teléfono</span></dt>
+              <dd><a href="tel:9152660000">(915) 266-0000</a></dd>
+            </div>
+            <div class="datum">
+              <dt><span class="en">Email</span><span class="es">Correo electrónico</span></dt>
+              <dd><a href="mailto:jorge.hernandez@hermandadtexas.org">jorge.hernandez@hermandadtexas.org</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div>
+          <p>
+            <span class="en">Everyone is welcome. We serve families regardless of income, and our
+              citizenship classes are free to the community.</span>
+            <span class="es">Todos son bienvenidos. Atendemos a las familias sin importar sus
+              ingresos, y nuestras clases de ciudadanía son gratuitas para la comunidad.</span>
+          </p>
+          <p>
+            <span class="en">If you are unsure whether we can help with your situation, call and
+              ask. If it is something we should not handle, we will tell you plainly and point you
+              toward someone who can.</span>
+            <span class="es">Si no está seguro de si podemos ayudarle con su situación, llame y
+              pregunte. Si es algo que no debemos manejar, se lo diremos claramente y lo
+              dirigiremos a alguien que sí pueda.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="legal">
+      <h2 class="section-title">
+        <span class="en">Privacy Policy</span><span class="es">Política de Privacidad</span>
+      </h2>
+      <p class="updated">
+        <span class="en">Last updated: July 21, 2026</span>
+        <span class="es">Última actualización: 21 de julio de 2026</span>
+      </p>
+
+      <p>
+        <span class="en">Hermandad Global Servicios Migratorios ("we", "us") collects and handles
+          personal information in the course of serving the community. This policy explains what we
+          collect, why, and who else may see it.</span>
+        <span class="es">Hermandad Global Servicios Migratorios ("nosotros") recopila y maneja
+          información personal en el curso de su servicio a la comunidad. Esta política explica qué
+          recopilamos, por qué, y quién más puede verlo.</span>
+      </p>
+
+      <div class="promise">
+        <p>
+          <span class="en"><strong>We never sell your information. We never share it for
+            advertising. We never give it to anyone outside our organization for their own
+            purposes.</strong> The only outside parties who ever handle it are the service providers
+            that run our office systems — they act solely on our instructions and may not use your
+            information for anything of their own. Beyond that, we share information only with your
+            permission, or when the law requires it.</span>
+          <span class="es"><strong>Nunca vendemos su información. Nunca la compartimos con fines
+            publicitarios. Nunca se la entregamos a nadie fuera de nuestra organización para sus
+            propios fines.</strong> Las únicas partes externas que llegan a manejarla son los
+            proveedores de servicios que operan nuestros sistemas de oficina — actúan únicamente
+            bajo nuestras instrucciones y no pueden usar su información para fines propios. Fuera de
+            eso, solo compartimos información con su permiso, o cuando la ley lo exige.</span>
+        </p>
+      </div>
+
+      <h3><span class="en">Information we collect</span><span class="es">Información que recopilamos</span></h3>
+      <ul class="plain">
+        <li><span class="en">Contact information — name, telephone number, email address, and mailing address.</span><span class="es">Información de contacto — nombre, número de teléfono, correo electrónico y dirección postal.</span></li>
+        <li><span class="en">Case information — including USCIS receipt numbers, form types, and case status, where you have asked us to help you follow a case.</span><span class="es">Información del caso — incluyendo números de recibo de USCIS, tipos de formulario y estado del caso, cuando usted nos ha pedido ayuda para dar seguimiento a un caso.</span></li>
+        <li><span class="en">Documents you choose to share with us so that we can help you organize them.</span><span class="es">Documentos que usted decide compartir con nosotros para que podamos ayudarle a organizarlos.</span></li>
+        <li><span class="en">Records of our communications with you, including calls and text messages.</span><span class="es">Registros de nuestras comunicaciones con usted, incluyendo llamadas y mensajes de texto.</span></li>
+      </ul>
+
+      <h3><span class="en">How we use it</span><span class="es">Cómo la usamos</span></h3>
+      <p>
+        <span class="en">We use your information only to provide the services you have asked for:
+          to contact you, to help you keep track of your case, to schedule classes and appointments,
+          and to keep accurate records of our work with you.</span>
+        <span class="es">Usamos su información únicamente para brindar los servicios que usted ha
+          solicitado: para comunicarnos con usted, ayudarle a dar seguimiento a su caso, programar
+          clases y citas, y mantener registros precisos de nuestro trabajo con usted.</span>
+      </p>
+
+      <h3><span class="en">Our service providers</span><span class="es">Nuestros proveedores de servicios</span></h3>
+      <p>
+        <span class="en">Like any modern office, we rely on software and services to do our work.
+          These providers handle information strictly on our behalf:</span>
+        <span class="es">Como cualquier oficina moderna, dependemos de software y servicios para
+          realizar nuestro trabajo. Estos proveedores manejan la información estrictamente en
+          nuestro nombre:</span>
+      </p>
+      <ul class="plain">
+        <li><span class="en">Case management software, where client and case records are kept.</span><span class="es">Software de gestión de casos, donde se mantienen los registros de clientes y casos.</span></li>
+        <li><span class="en">Telephone and messaging services, which carry our calls and text messages.</span><span class="es">Servicios de telefonía y mensajería, que transmiten nuestras llamadas y mensajes de texto.</span></li>
+        <li><span class="en">The U.S. Citizenship and Immigration Services (USCIS) case status system. When you ask us to follow your case, we send USCIS the receipt number you gave us so we can tell you where the case stands. This is the same information USCIS already holds about your own case.</span><span class="es">El sistema de estado de casos del Servicio de Ciudadanía e Inmigración de los Estados Unidos (USCIS). Cuando usted nos pide dar seguimiento a su caso, enviamos a USCIS el número de recibo que usted nos dio para poder informarle en qué situación está el caso. Esta es la misma información que USCIS ya tiene sobre su propio caso.</span></li>
+        <li><span class="en">Email and accounting systems used to run the organization.</span><span class="es">Sistemas de correo electrónico y contabilidad utilizados para operar la organización.</span></li>
+      </ul>
+      <p>
+        <span class="en">None of these providers may use your information for their own purposes, and
+          none of them receives it for advertising or sale.</span>
+        <span class="es">Ninguno de estos proveedores puede usar su información para sus propios
+          fines, y ninguno la recibe con fines publicitarios o de venta.</span>
+      </p>
+
+      <h3><span class="en">Keeping it safe</span><span class="es">Cómo la protegemos</span></h3>
+      <p>
+        <span class="en">Access to client information is limited to staff and volunteers who need it
+          to do their work. We retain records only as long as needed to serve you and to meet our
+          record-keeping obligations.</span>
+        <span class="es">El acceso a la información de los clientes se limita al personal y
+          voluntarios que la necesitan para su trabajo. Conservamos los registros solo el tiempo
+          necesario para atenderle y cumplir con nuestras obligaciones de mantenimiento de
+          registros.</span>
+      </p>
+
+      <h3><span class="en">Your choices</span><span class="es">Sus opciones</span></h3>
+      <p>
+        <span class="en">You may ask us what information we hold about you, ask us to correct it, or
+          ask us to stop contacting you. Write to us at the address below or call the office.</span>
+        <span class="es">Usted puede preguntarnos qué información tenemos sobre usted, pedirnos que
+          la corrijamos, o pedirnos que dejemos de contactarle. Escríbanos a la dirección indicada
+          abajo o llame a la oficina.</span>
+      </p>
+
+      <h3><span class="en">Children</span><span class="es">Menores de edad</span></h3>
+      <p>
+        <span class="en">This website is not directed to children. We collect information about
+          minors only as part of a family's case, and only from a parent or guardian.</span>
+        <span class="es">Este sitio web no está dirigido a menores. Recopilamos información sobre
+          menores únicamente como parte del caso de una familia, y solo de un padre, madre o
+          tutor.</span>
+      </p>
+
+      <h3><span class="en">Changes and questions</span><span class="es">Cambios y preguntas</span></h3>
+      <p>
+        <span class="en">If we change this policy we will update the date above. Questions may be
+          directed to the office at 2901 Alameda Ave, El Paso, TX 79905, by phone at (915) 266-0000,
+          or by email.</span>
+        <span class="es">Si cambiamos esta política, actualizaremos la fecha indicada arriba. Las
+          preguntas pueden dirigirse a la oficina en 2901 Alameda Ave, El Paso, TX 79905, por
+          teléfono al (915) 266-0000, o por correo electrónico.</span>
+      </p>
+    </section>
+
+    <section id="terms" class="legal">
+      <h2 class="section-title">
+        <span class="en">Terms of Service</span><span class="es">Términos de Servicio</span>
+      </h2>
+      <p class="updated">
+        <span class="en">Last updated: July 21, 2026</span>
+        <span class="es">Última actualización: 21 de julio de 2026</span>
+      </p>
+
+      <h3><span class="en">We are not a law firm</span><span class="es">No somos un despacho de abogados</span></h3>
+      <p>
+        <span class="en">Hermandad Global Servicios Migratorios is a nonprofit organization. We are
+          not attorneys, we are not a law firm, and nothing we provide is legal advice. Using this
+          website or our services does not create an attorney-client relationship. Our application
+          for recognition by the United States Department of Justice is pending; we are not
+          currently a recognized organization and we have no accredited representatives.</span>
+        <span class="es">Hermandad Global Servicios Migratorios es una organización sin fines de
+          lucro. No somos abogados, no somos un despacho de abogados, y nada de lo que
+          proporcionamos constituye asesoría legal. El uso de este sitio web o de nuestros servicios
+          no crea una relación abogado-cliente. Nuestra solicitud de reconocimiento ante el
+          Departamento de Justicia de los Estados Unidos está pendiente; actualmente no somos una
+          organización reconocida y no contamos con representantes acreditados.</span>
+      </p>
+
+      <h3><span class="en">What this website is for</span><span class="es">Para qué sirve este sitio</span></h3>
+      <p>
+        <span class="en">The information here is general and offered for educational purposes. It
+          may not apply to your situation, and immigration rules change. Do not rely on this website
+          in place of advice from a licensed attorney or an accredited representative.</span>
+        <span class="es">La información aquí es general y se ofrece con fines educativos. Puede no
+          aplicarse a su situación, y las reglas migratorias cambian. No dependa de este sitio web
+          en lugar de la asesoría de un abogado con licencia o un representante acreditado.</span>
+      </p>
+
+      <h3><span class="en">Case status information</span><span class="es">Información sobre el estado del caso</span></h3>
+      <p>
+        <span class="en">Where we help you follow a case, the status information comes from USCIS. We
+          pass it along as we receive it. We do not control it, we cannot change it, and we cannot
+          guarantee that it is current or complete. Official notices from USCIS always take
+          precedence over anything we tell you.</span>
+        <span class="es">Cuando le ayudamos a dar seguimiento a un caso, la información del estado
+          proviene de USCIS. Se la transmitimos tal como la recibimos. No la controlamos, no podemos
+          modificarla, y no podemos garantizar que esté actualizada o completa. Los avisos oficiales
+          de USCIS siempre tienen prioridad sobre cualquier cosa que le digamos.</span>
+      </p>
+
+      <h3><span class="en">No guarantee of outcome</span><span class="es">Sin garantía de resultado</span></h3>
+      <p>
+        <span class="en">No one can guarantee the outcome of an immigration case, and we do not. Any
+          organization that promises you a result is not being honest with you.</span>
+        <span class="es">Nadie puede garantizar el resultado de un caso migratorio, y nosotros no lo
+          hacemos. Cualquier organización que le prometa un resultado no está siendo honesta con
+          usted.</span>
+      </p>
+
+      <h3><span class="en">Your responsibilities</span><span class="es">Sus responsabilidades</span></h3>
+      <p>
+        <span class="en">Give us accurate information, and tell us when something changes — an
+          address, a phone number, a notice you received. Much of what we can do for you depends on
+          it.</span>
+        <span class="es">Bríndenos información precisa, y avísenos cuando algo cambie — una
+          dirección, un número de teléfono, un aviso que haya recibido. Mucho de lo que podemos
+          hacer por usted depende de ello.</span>
+      </p>
+
+      <h3><span class="en">Governing law</span><span class="es">Ley aplicable</span></h3>
+      <p>
+        <span class="en">These terms are governed by the laws of the State of Texas.</span>
+        <span class="es">Estos términos se rigen por las leyes del Estado de Texas.</span>
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="legal-name">Hermandad Global Servicios Migratorios</p>
+        <p style="margin:0">
+          <span class="en">A 501(c)(3) nonprofit organization</span>
+          <span class="es">Organización sin fines de lucro 501(c)(3)</span>
+        </p>
+      </div>
+      <div>
+        <p style="margin:0">
+          2901 Alameda Ave<br>
+          El Paso, TX 79905<br>
+          <a href="tel:9152660000">(915) 266-0000</a>
+        </p>
+      </div>
+      <div>
+        <p style="margin:0">
+          <a href="#privacy"><span class="en">Privacy Policy</span><span class="es">Política de Privacidad</span></a><br>
+          <a href="#terms"><span class="en">Terms of Service</span><span class="es">Términos de Servicio</span></a>
+        </p>
+      </div>
+      <div>
+        <p style="margin:0; font-size:0.82rem">
+          <span class="en">Not attorneys. Not legal advice. DOJ recognition applied for and
+            pending.</span>
+          <span class="es">No somos abogados. No brindamos asesoría legal. Reconocimiento del DOJ
+            solicitado y pendiente.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var site = document.getElementById('site');
+    var en = document.getElementById('btn-en');
+    var es = document.getElementById('btn-es');
+
+    function setLang(lang) {
+      site.setAttribute('data-lang', lang);
+      en.setAttribute('aria-pressed', String(lang === 'en'));
+      es.setAttribute('aria-pressed', String(lang === 'es'));
+    }
+
+    en.addEventListener('click', function () { setLang('en'); });
+    es.addEventListener('click', function () { setLang('es'); });
+
+    if ((navigator.language || '').toLowerCase().indexOf('es') === 0) setLang('es');
+  })();
+</script>
+</body>
+</html>
