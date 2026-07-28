@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -499,7 +499,7 @@
 </head>
 <body>
 
-<div id="site" data-lang="en">
+<div id="site" data-lang="es">
 
   <header class="masthead">
     <div class="wrap masthead-inner">
@@ -518,8 +518,8 @@
         <a href="#terms"><span class="en">Terms</span><span class="es">Términos</span></a>
       </nav>
       <div class="lang" role="group" aria-label="Language / Idioma">
-        <button type="button" id="btn-en" aria-pressed="true">EN</button>
-        <button type="button" id="btn-es" aria-pressed="false">ES</button>
+        <button type="button" id="btn-es" aria-pressed="true">ES</button>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
       </div>
     </div>
   </header>
@@ -913,7 +913,7 @@
     en.addEventListener('click', function () { setLang('en'); });
     es.addEventListener('click', function () { setLang('es'); });
 
-    if ((navigator.language || '').toLowerCase().indexOf('es') === 0) setLang('es');
+    // The page always opens in Spanish. Visitors who want English press EN.
   })();
 </script>
 </body>
